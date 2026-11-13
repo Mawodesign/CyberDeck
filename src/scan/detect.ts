@@ -7,18 +7,13 @@ export const WARP_H = 168;
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 type Cv = any;
-let cvPromise: Promise<Cv> | null = null;
+let cvPromise: Promise<{ cv: Cv }> | null = null;
 
-export function loadCv(): Promise<Cv> {
-  cvPromise ??= import('@techstark/opencv-js').then(async (mod) => {
-    let cv: Cv = (mod as Cv).default ?? mod;
-    if (cv instanceof Promise) cv = await cv;
-    if (!cv.Mat) {
-      await new Promise<void>((resolve) => {
-        cv.onRuntimeInitialized = () => resolve();
-      });
-    }
-    return cv;
+/** Ładuje OpenCV. Wynik jest w opakowaniu `{ cv }`, bo sam moduł OpenCV ma metodę `then`. */
+export function loadCv(): Promise<{ cv: Cv }> {
+  cvPromise ??= import('./cv').then((m) => m.initCv());
+  cvPromise.catch(() => {
+    cvPromise = null; // pozwól spróbować ponownie po błędzie sieci
   });
   return cvPromise;
 }

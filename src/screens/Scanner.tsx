@@ -72,7 +72,7 @@ export function ScannerScreen() {
       try {
         setStatus('loading');
         setMessage('Ładowanie skanera…');
-        const [cv, index] = await Promise.all([loadCv(), loadFingerprintIndex(assetUrl('data/fingerprints.bin'))]);
+        const [{ cv }, index] = await Promise.all([loadCv(), loadFingerprintIndex(assetUrl('data/fingerprints.bin'))]);
         engineRef.current = { cv, index };
       } catch (e) {
         if (alive) {
