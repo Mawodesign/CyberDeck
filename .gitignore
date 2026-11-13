@@ -8,3 +8,5 @@ grading/results/*
 !grading/results/.gitkeep
 public/img
 public/data
+public/test-scan.jpg
+

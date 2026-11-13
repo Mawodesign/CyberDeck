@@ -1,0 +1,71 @@
+name: Publikacja i codzienne ceny
+
+on:
+  push:
+    branches: [main]
+  schedule:
+    - cron: '0 4 * * *' # codziennie rano, po publikacji pliku cen Cardmarket
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm test
+
+      - name: Przywróć historię cen z gałęzi data
+        run: |
+          mkdir -p public/data
+          if git fetch origin data --depth=1 2>/dev/null && git show FETCH_HEAD:price-history.json > /tmp/history.json 2>/dev/null; then
+            cp /tmp/history.json public/data/price-history.json
+          else
+            echo "Brak zapisanej historii cen, zaczynam od zera"
+          fi
+
+      - name: Pobierz karty, ceny i wzorce
+        run: |
+          npx tsx scripts/build-icons.ts
+          npm run data
+
+      - name: Zapisz historię cen na gałęzi data
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          tmp=$(mktemp -d)
+          cp public/data/price-history.json "$tmp/"
+          cd "$tmp"
+          git init -q
+          git config user.name "github-actions"
+          git config user.email "github-actions@users.noreply.github.com"
+          git add price-history.json
+          git commit -qm "Historia cen"
+          git push -qf "https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git" HEAD:data
+
+      - name: Zbuduj aplikację
+        run: npm run build
+        env:
+          BASE_PATH: /${{ github.event.repository.name }}/
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
+      - id: deployment
+        uses: actions/deploy-pages@v4

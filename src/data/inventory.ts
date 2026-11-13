@@ -101,15 +101,19 @@ export const inventory = {
 
 /** Zdjęcia gradingu czekające na wysyłkę, klucz „<requestId>/<slot>”. */
 export const pendingPhotos = {
+  // Zapis jako ArrayBuffer, bo Blob w IndexedDB bywa zawodny w Safari.
   async put(requestId: string, slot: string, blob: Blob): Promise<void> {
-    await (await db()).put('photos', blob, `${requestId}/${slot}`);
+    const record = { type: blob.type || 'image/jpeg', data: await blob.arrayBuffer() };
+    await (await db()).put('photos', record, `${requestId}/${slot}`);
   },
   async get(requestId: string): Promise<Record<string, Blob>> {
     const d = await db();
     const out: Record<string, Blob> = {};
     for (const key of await d.getAllKeys('photos')) {
       const [rid, slot] = String(key).split('/');
-      if (rid === requestId) out[slot] = await d.get('photos', key) as Blob;
+      if (rid !== requestId) continue;
+      const record = await d.get('photos', key) as { type: string; data: ArrayBuffer };
+      out[slot] = new Blob([record.data], { type: record.type });
     }
     return out;
   },

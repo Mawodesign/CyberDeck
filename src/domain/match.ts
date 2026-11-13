@@ -10,7 +10,10 @@ export const MATCH_MARGIN = 0.05;
 /** Wydania o podobieństwie co najmniej takim mają wspólny artKey. */
 export const SAME_ART = 0.97;
 
-export interface ArtEntry { artKey: string; printingIds: string[] }
+/** Margines, w którym inne ilustracje tej samej karty (np. promo z innym znaczkiem) traktujemy jako jej wydania. */
+export const SAME_CARD_BAND = 0.08;
+
+export interface ArtEntry { artKey: string; cardSlug: string; printingIds: string[] }
 export interface FingerprintIndex { arts: ArtEntry[]; vectors: Float32Array[] }
 export interface Candidate { artKey: string; printingIds: string[]; score: number }
 export interface MatchResult { confident: boolean; candidates: Candidate[] }
@@ -60,18 +63,27 @@ export function rotate180(fp: Float32Array): Float32Array {
   return Float32Array.from(fp).reverse();
 }
 
-/** Do 3 najbliższych ilustracji; `confident`, gdy najlepsza przekracza próg i wyraźnie wygrywa z drugą. */
+/**
+ * Do 3 kandydatów. Pierwszy łączy wszystkie bliskie ilustracje tej samej karty (różnią się tylko
+ * znaczkiem lub ramką), więc ich rozróżnienie to wybór wydania, a nie niepewność.
+ * `confident`, gdy najlepsza przekracza próg i wyraźnie wygrywa z najbliższą INNĄ kartą.
+ */
 export function matchCard(fp: Float32Array, index: FingerprintIndex): MatchResult {
   const flipped = rotate180(fp);
-  const scored: Candidate[] = index.arts.map((a, i) => ({
-    artKey: a.artKey,
-    printingIds: a.printingIds,
+  const scored = index.arts.map((art, i) => ({
+    art,
     score: Math.max(similarity(fp, index.vectors[i]), similarity(flipped, index.vectors[i])),
   }));
   scored.sort((a, b) => b.score - a.score);
-  const candidates = scored.slice(0, 3);
-  const [first, second] = candidates;
-  const confident = !!first && first.score >= MATCH_MIN && (!second || first.score - second.score >= MATCH_MARGIN);
+  const first = scored[0];
+  if (!first) return { confident: false, candidates: [] };
+  const same = scored.filter((s) => s.art.cardSlug === first.art.cardSlug && first.score - s.score <= SAME_CARD_BAND);
+  const rivals = scored.filter((s) => s.art.cardSlug !== first.art.cardSlug);
+  const candidates: Candidate[] = [
+    { artKey: first.art.artKey, printingIds: same.flatMap((s) => s.art.printingIds), score: first.score },
+    ...rivals.slice(0, 2).map((s) => ({ artKey: s.art.artKey, printingIds: s.art.printingIds, score: s.score })),
+  ];
+  const confident = first.score >= MATCH_MIN && (!rivals[0] || first.score - rivals[0].score >= MATCH_MARGIN);
   return { confident, candidates };
 }
 

@@ -1,4 +1,4 @@
-import sharp from 'sharp';
+import sharp, { type Sharp } from 'sharp';
 import { beforeAll, expect, test } from 'vitest';
 import {
   decodeIndex, encodeIndex, fingerprint, FP_LEN, groupByArt, matchCard, rotate180, similarity,
@@ -8,7 +8,7 @@ import {
 const DIR = 'scripts/fixtures/img';
 const FILES = ['smasher-retail-001', 'smasher-beta-001', 'smasher-retail-141', 'other'];
 
-async function fp(file: string, mod?: (s: sharp.Sharp) => sharp.Sharp): Promise<Float32Array> {
+async function fp(file: string, mod?: (s: Sharp) => Sharp): Promise<Float32Array> {
   let img = sharp(`${DIR}/${file}.webp`);
   if (mod) img = mod(img);
   const { data, info } = await img.ensureAlpha().raw().toBuffer({ resolveWithObject: true });
@@ -20,7 +20,7 @@ beforeAll(async () => {
   const vectors = await Promise.all(FILES.map((f) => fp(f)));
   const keys = groupByArt(FILES, vectors);
   const arts = [...new Set(Object.values(keys))].map((artKey) => ({
-    artKey, printingIds: FILES.filter((f) => keys[f] === artKey),
+    artKey, cardSlug: artKey.startsWith('smasher') ? 'smasher' : artKey, printingIds: FILES.filter((f) => keys[f] === artKey),
   }));
   index = { arts, vectors: arts.map((a) => vectors[FILES.indexOf(a.artKey)]) };
 });
@@ -57,10 +57,35 @@ test('jednolicie szary obraz nie jest pewnym rozpoznaniem', () => {
 
 test('nigdy więcej niż 3 kandydatów', async () => {
   const many: FingerprintIndex = {
-    arts: Array.from({ length: 10 }, (_, i) => ({ artKey: `a${i}`, printingIds: [`a${i}`] })),
+    arts: Array.from({ length: 10 }, (_, i) => ({ artKey: `a${i}`, cardSlug: `c${i}`, printingIds: [`a${i}`] })),
     vectors: Array.from({ length: 10 }, () => index.vectors[0]),
   };
   expect(matchCard(index.vectors[0], many).candidates).toHaveLength(3);
+});
+
+test('bliskie ilustracje tej samej karty to wybór wydania, a innej karty to niepewność', () => {
+  const v = index.vectors[0];
+  const bumped = Float32Array.from(v, (x, i) => x + (i % 7 === 0 ? 0.004 : 0));
+  const len = Math.hypot(...bumped);
+  const near = bumped.map((x) => x / len); // prawie ta sama ilustracja, znormalizowana jak wzorce
+  const sameCard: FingerprintIndex = {
+    arts: [
+      { artKey: 'retail', cardSlug: 'smasher', printingIds: ['retail'] },
+      { artKey: 'promo', cardSlug: 'smasher', printingIds: ['promo'] },
+    ],
+    vectors: [v, near],
+  };
+  const r = matchCard(v, sameCard);
+  expect(r.confident).toBe(true);
+  expect(r.candidates[0].printingIds).toEqual(['retail', 'promo']);
+
+  const otherCard: FingerprintIndex = {
+    ...sameCard,
+    arts: [sameCard.arts[0], { artKey: 'x', cardSlug: 'inna', printingIds: ['x'] }],
+  };
+  const r2 = matchCard(v, otherCard);
+  expect(r2.confident).toBe(false);
+  expect(r2.candidates.map((c) => c.artKey)).toEqual(['retail', 'x']);
 });
 
 test('zapis i odczyt indeksu zachowuje dopasowania', () => {

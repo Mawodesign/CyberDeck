@@ -18,7 +18,11 @@ const ids = withImage.map((p) => p.id);
 const keys = groupByArt(ids, vectors);
 const artKeys = [...new Set(Object.values(keys))];
 const index = {
-  arts: artKeys.map((artKey) => ({ artKey, printingIds: ids.filter((id) => keys[id] === artKey) })),
+  arts: artKeys.map((artKey) => ({
+    artKey,
+    cardSlug: withImage[ids.indexOf(artKey)].cardSlug,
+    printingIds: ids.filter((id) => keys[id] === artKey),
+  })),
   vectors: artKeys.map((k) => vectors[ids.indexOf(k)]),
 };
 
