@@ -1,0 +1,651 @@
+{
+ "items": [
+  {
+   "id": "eff41c12-b872-4101-9779-00e691532893",
+   "external_id": "cb-adam-smasher-ender-of-legends",
+   "name": "Adam Smasher",
+   "subname": "Ender of Legends",
+   "display_name": "Adam Smasher: Ender of Legends",
+   "slug": "adam-smasher-ender-of-legends",
+   "canonical_name": "Adam Smasher — Ender of Legends",
+   "canonical_base_name": "Adam Smasher",
+   "language": "en",
+   "flavor_text": null,
+   "printing_id": "a9c1137e-2e33-4293-9dcc-9351c9a0bbee",
+   "set": {
+    "code": "welcometonightcityretail",
+    "name": "Welcome to Night City — Retail"
+   },
+   "rarity": "Epic",
+   "image_url": "https://example.invalid/x.webp?sig=1",
+   "source_image_url": "https://dstcynss47vun.cloudfront.net/prod/cyberpunk/portal/a9c1137e-2e33-4293-9dcc-9351c9a0bbee/render-mpvmot9g.webp",
+   "color": "Red",
+   "card_type": "Legend",
+   "is_eddiable": true,
+   "classifications": [
+    "Arasaka",
+    "Merc"
+   ],
+   "keywords": [],
+   "cost": 9,
+   "power": 9,
+   "ram": 2,
+   "artist": "Michał Dziekan",
+   "print_number": "001",
+   "printings": [
+    {
+     "id": "a9c1137e-2e33-4293-9dcc-9351c9a0bbee",
+     "collector_number": "001",
+     "image_url": "https://example.invalid/a9c1137e-2e33-4293-9dcc-9351c9a0bbee.webp?sig=1",
+     "source_image_url": "https://dstcynss47vun.cloudfront.net/prod/cyberpunk/portal/a9c1137e-2e33-4293-9dcc-9351c9a0bbee/render-mpvmot9g.webp",
+     "set": {
+      "code": "welcometonightcityretail",
+      "name": "Welcome to Night City — Retail"
+     },
+     "rarity": "Epic",
+     "finish": null,
+     "artist": "Michał Dziekan",
+     "language": "en",
+     "localized_name": null
+    },
+    {
+     "id": "828f575e-012d-4287-8b35-b0d8e5a4464c",
+     "collector_number": "141",
+     "image_url": "https://example.invalid/828f575e-012d-4287-8b35-b0d8e5a4464c.webp?sig=1",
+     "source_image_url": "https://dstcynss47vun.cloudfront.net/prod/cyberpunk/portal/828f575e-012d-4287-8b35-b0d8e5a4464c/render-mpvmqjzm.webp",
+     "set": {
+      "code": "welcometonightcityretail",
+      "name": "Welcome to Night City — Retail"
+     },
+     "rarity": "Iconic Legend",
+     "finish": null,
+     "artist": "Pandart Studio",
+     "language": "en",
+     "localized_name": null
+    },
+    {
+     "id": "4d75c13e-bde2-409b-8bcc-516e054f28f5",
+     "collector_number": "β001",
+     "image_url": "https://example.invalid/4d75c13e-bde2-409b-8bcc-516e054f28f5.webp?sig=1",
+     "source_image_url": "https://dstcynss47vun.cloudfront.net/prod/cyberpunk/portal/4d75c13e-bde2-409b-8bcc-516e054f28f5/render-mpu6n03b.webp",
+     "set": {
+      "code": "welcometonightcitybeta",
+      "name": "Welcome to Night City — Beta"
+     },
+     "rarity": "Epic",
+     "finish": null,
+     "artist": "Michał Dziekan",
+     "language": "en",
+     "localized_name": null
+    },
+    {
+     "id": "74c794ed-2ca7-4318-bcdd-8e3fe5a11f4e",
+     "collector_number": "β141",
+     "image_url": "https://example.invalid/74c794ed-2ca7-4318-bcdd-8e3fe5a11f4e.webp?sig=1",
+     "source_image_url": "https://dstcynss47vun.cloudfront.net/prod/cyberpunk/portal/74c794ed-2ca7-4318-bcdd-8e3fe5a11f4e/render-mpxm5nf4.webp",
+     "set": {
+      "code": "welcometonightcitybeta",
+      "name": "Welcome to Night City — Beta"
+     },
+     "rarity": "Iconic Legend",
+     "finish": null,
+     "artist": "Pandart Studio",
+     "language": "en",
+     "localized_name": null
+    },
+    {
+     "id": "3d5b7ebf-0378-401b-bfa2-32a02734c921",
+     "collector_number": "001",
+     "image_url": "https://example.invalid/3d5b7ebf-0378-401b-bfa2-32a02734c921.webp?sig=1",
+     "source_image_url": "https://dstcynss47vun.cloudfront.net/prod/cyberpunk/portal/3d5b7ebf-0378-401b-bfa2-32a02734c921/render-mrjq8fp3.webp",
+     "set": {
+      "code": "prereleaseretail",
+      "name": "Pre-Release Retail"
+     },
+     "rarity": "Epic",
+     "finish": null,
+     "artist": "Michał Dziekan",
+     "language": "en",
+     "localized_name": null
+    },
+    {
+     "id": "10ca370b-deb7-4c58-a9f9-faf4f9708f6d",
+     "collector_number": "001",
+     "image_url": "https://example.invalid/10ca370b-deb7-4c58-a9f9-faf4f9708f6d.webp?sig=1",
+     "source_image_url": "https://dstcynss47vun.cloudfront.net/prod/cyberpunk/portal/10ca370b-deb7-4c58-a9f9-faf4f9708f6d/render-mqi3djc8.webp",
+     "set": {
+      "code": "prereleasebeta",
+      "name": "Pre-Release Beta"
+     },
+     "rarity": "Epic",
+     "finish": null,
+     "artist": "Michał Dziekan",
+     "language": "en",
+     "localized_name": null
+    },
+    {
+     "id": "aedbd6fe-19d2-4185-b708-b6393e21da20",
+     "collector_number": "008",
+     "image_url": "https://example.invalid/aedbd6fe-19d2-4185-b708-b6393e21da20.webp?sig=1",
+     "source_image_url": "https://dstcynss47vun.cloudfront.net/prod/cyberpunk/portal/aedbd6fe-19d2-4185-b708-b6393e21da20/render-msyihgrv.webp",
+     "set": {
+      "code": "PRM01",
+      "name": "Set 1 Promos"
+     },
+     "rarity": "Nova Rare",
+     "finish": null,
+     "artist": "Pandart Studio",
+     "language": "en",
+     "localized_name": null
+    },
+    {
+     "id": "4eebb315-5f75-404e-b82a-7840b64cae88",
+     "collector_number": "029",
+     "image_url": "https://example.invalid/4eebb315-5f75-404e-b82a-7840b64cae88.webp?sig=1",
+     "source_image_url": "https://dstcynss47vun.cloudfront.net/prod/cyberpunk/portal/4eebb315-5f75-404e-b82a-7840b64cae88/render-mtcqmd71.webp",
+     "set": {
+      "code": "edgerunneropens1",
+      "name": "Edgerunner Open S 1"
+     },
+     "rarity": "Nova Rare",
+     "finish": null,
+     "artist": "Pandart Studio",
+     "language": "en",
+     "localized_name": null
+    },
+    {
+     "id": "e8a372eb-313d-43a0-a972-cf742a97baef",
+     "collector_number": "001",
+     "image_url": "https://example.invalid/e8a372eb-313d-43a0-a972-cf742a97baef.webp?sig=1",
+     "source_image_url": "https://dstcynss47vun.cloudfront.net/prod/cyberpunk/portal/e8a372eb-313d-43a0-a972-cf742a97baef/render-ba7cf79d-b704-419d-a6dc-1e25435c9784.webp",
+     "set": {
+      "code": "welcometonightcityretail-fr",
+      "name": "Welcome to Night City — Retail — FR"
+     },
+     "rarity": "Epic",
+     "finish": null,
+     "artist": "Michał Dziekan",
+     "language": "fr",
+     "localized_name": "Adam Smasher — Acheveur De Légendes"
+    },
+    {
+     "id": "34b9a5b6-8c89-4f62-89a4-26a774e2b3d7",
+     "collector_number": "141",
+     "image_url": "https://example.invalid/34b9a5b6-8c89-4f62-89a4-26a774e2b3d7.webp?sig=1",
+     "source_image_url": "https://dstcynss47vun.cloudfront.net/prod/cyberpunk/portal/34b9a5b6-8c89-4f62-89a4-26a774e2b3d7/render-4502c9f0-6a90-4fba-b73c-c61921ced93f.webp",
+     "set": {
+      "code": "welcometonightcityretail-fr",
+      "name": "Welcome to Night City — Retail — FR"
+     },
+     "rarity": "Iconic Legend",
+     "finish": null,
+     "artist": "Pandart Studio",
+     "language": "fr",
+     "localized_name": "Adam Smasher — Acheveur De Légendes"
+    },
+    {
+     "id": "595437cd-5180-4aef-b110-61950f738d8e",
+     "collector_number": "001",
+     "image_url": "https://example.invalid/595437cd-5180-4aef-b110-61950f738d8e.webp?sig=1",
+     "source_image_url": "https://dstcynss47vun.cloudfront.net/prod/cyberpunk/portal/595437cd-5180-4aef-b110-61950f738d8e/render-df727d2a-39be-42be-8359-36aeedcfe8e3.webp",
+     "set": {
+      "code": "prereleaseretail-FR",
+      "name": "Pre-Release Retail — French"
+     },
+     "rarity": "Epic",
+     "finish": null,
+     "artist": "Michał Dziekan",
+     "language": "fr",
+     "localized_name": "Adam Smasher — Acheveur De Légendes"
+    }
+   ],
+   "selected_printing_id": "a9c1137e-2e33-4293-9dcc-9351c9a0bbee",
+   "legalities": {
+    "standard": "legal"
+   },
+   "legality": "legal"
+  },
+  {
+   "id": "81a8dec7-9541-4020-93e1-7d798a57dcbc",
+   "external_id": "cb-v-streetkid",
+   "name": "V",
+   "subname": "Streetkid",
+   "display_name": "V: Streetkid",
+   "slug": "v-streetkid",
+   "canonical_name": "V — Streetkid",
+   "canonical_base_name": "V",
+   "language": "en",
+   "flavor_text": null,
+   "printing_id": "3fc63c58-5954-4744-a5af-047bfc5cb159",
+   "set": {
+    "code": "welcometonightcityretail",
+    "name": "Welcome to Night City — Retail"
+   },
+   "rarity": "Rare",
+   "image_url": "https://example.invalid/x.webp?sig=1",
+   "source_image_url": "https://dstcynss47vun.cloudfront.net/prod/cyberpunk/portal/3fc63c58-5954-4744-a5af-047bfc5cb159/render-mq9zzfnq.webp",
+   "color": "Red",
+   "card_type": "Legend",
+   "is_eddiable": true,
+   "classifications": [
+    "Merc"
+   ],
+   "keywords": [],
+   "cost": 5,
+   "power": 6,
+   "ram": 2,
+   "artist": "Olgierd Ciszak",
+   "print_number": "005a",
+   "printings": [
+    {
+     "id": "3fc63c58-5954-4744-a5af-047bfc5cb159",
+     "collector_number": "005a",
+     "image_url": "https://example.invalid/3fc63c58-5954-4744-a5af-047bfc5cb159.webp?sig=1",
+     "source_image_url": "https://dstcynss47vun.cloudfront.net/prod/cyberpunk/portal/3fc63c58-5954-4744-a5af-047bfc5cb159/render-mq9zzfnq.webp",
+     "set": {
+      "code": "welcometonightcityretail",
+      "name": "Welcome to Night City — Retail"
+     },
+     "rarity": "Rare",
+     "finish": null,
+     "artist": "Olgierd Ciszak",
+     "language": "en",
+     "localized_name": null
+    },
+    {
+     "id": "c2d0e2a7-470f-4498-b6d5-5df1e3ecc3ef",
+     "collector_number": "005b",
+     "image_url": "https://example.invalid/c2d0e2a7-470f-4498-b6d5-5df1e3ecc3ef.webp?sig=1",
+     "source_image_url": "https://dstcynss47vun.cloudfront.net/prod/cyberpunk/portal/c2d0e2a7-470f-4498-b6d5-5df1e3ecc3ef/render-mpvmk1ou.webp",
+     "set": {
+      "code": "welcometonightcityretail",
+      "name": "Welcome to Night City — Retail"
+     },
+     "rarity": "Rare",
+     "finish": null,
+     "artist": "Olgierd Ciszak",
+     "language": "en",
+     "localized_name": null
+    },
+    {
+     "id": "837d354a-a1c8-4df0-b4ac-4db43730187a",
+     "collector_number": "144",
+     "image_url": "https://example.invalid/837d354a-a1c8-4df0-b4ac-4db43730187a.webp?sig=1",
+     "source_image_url": "https://dstcynss47vun.cloudfront.net/prod/cyberpunk/portal/837d354a-a1c8-4df0-b4ac-4db43730187a/render-mpvmu8qm.webp",
+     "set": {
+      "code": "welcometonightcityretail",
+      "name": "Welcome to Night City — Retail"
+     },
+     "rarity": "Iconic Legend",
+     "finish": null,
+     "artist": "Pandart Studio",
+     "language": "en",
+     "localized_name": null
+    },
+    {
+     "id": "79119e83-b50b-4a79-8a6c-f496d9ed7ef6",
+     "collector_number": "β005a",
+     "image_url": "https://example.invalid/79119e83-b50b-4a79-8a6c-f496d9ed7ef6.webp?sig=1",
+     "source_image_url": "https://dstcynss47vun.cloudfront.net/prod/cyberpunk/portal/79119e83-b50b-4a79-8a6c-f496d9ed7ef6/render-mpu5tt66.webp",
+     "set": {
+      "code": "welcometonightcitybeta",
+      "name": "Welcome to Night City — Beta"
+     },
+     "rarity": "Rare",
+     "finish": null,
+     "artist": "Olgierd Ciszak",
+     "language": "en",
+     "localized_name": null
+    },
+    {
+     "id": "e6dbfd52-85c5-4fd4-a77c-ca829e827d8a",
+     "collector_number": "β005b",
+     "image_url": "https://example.invalid/e6dbfd52-85c5-4fd4-a77c-ca829e827d8a.webp?sig=1",
+     "source_image_url": "https://dstcynss47vun.cloudfront.net/prod/cyberpunk/portal/e6dbfd52-85c5-4fd4-a77c-ca829e827d8a/render-mpu5v3ef.webp",
+     "set": {
+      "code": "welcometonightcitybeta",
+      "name": "Welcome to Night City — Beta"
+     },
+     "rarity": "Rare",
+     "finish": null,
+     "artist": "Olgierd Ciszak",
+     "language": "en",
+     "localized_name": null
+    },
+    {
+     "id": "20debd66-ff1c-42c3-9869-928cba33ccb5",
+     "collector_number": "β144",
+     "image_url": "https://example.invalid/20debd66-ff1c-42c3-9869-928cba33ccb5.webp?sig=1",
+     "source_image_url": "https://dstcynss47vun.cloudfront.net/prod/cyberpunk/portal/20debd66-ff1c-42c3-9869-928cba33ccb5/render-mpxm5mbr.webp",
+     "set": {
+      "code": "welcometonightcitybeta",
+      "name": "Welcome to Night City — Beta"
+     },
+     "rarity": "Iconic Legend",
+     "finish": null,
+     "artist": "Pandart Studio",
+     "language": "en",
+     "localized_name": null
+    },
+    {
+     "id": "ce137eea-c335-4f03-81f0-4717b75d5ce7",
+     "collector_number": "013",
+     "image_url": "https://example.invalid/ce137eea-c335-4f03-81f0-4717b75d5ce7.webp?sig=1",
+     "source_image_url": "https://dstcynss47vun.cloudfront.net/prod/cyberpunk/portal/ce137eea-c335-4f03-81f0-4717b75d5ce7/render-msyh4ii0.webp",
+     "set": {
+      "code": "edgerunneropens1",
+      "name": "Edgerunner Open S 1"
+     },
+     "rarity": "Nova Rare",
+     "finish": null,
+     "artist": "Envar Studio",
+     "language": "en",
+     "localized_name": null
+    },
+    {
+     "id": "0f082a95-b3e2-4563-be0b-88b5d85d6138",
+     "collector_number": "017",
+     "image_url": "https://example.invalid/0f082a95-b3e2-4563-be0b-88b5d85d6138.webp?sig=1",
+     "source_image_url": "https://dstcynss47vun.cloudfront.net/prod/cyberpunk/portal/0f082a95-b3e2-4563-be0b-88b5d85d6138/render-mt7ob1qo.webp",
+     "set": {
+      "code": "edgerunneropens1",
+      "name": "Edgerunner Open S 1"
+     },
+     "rarity": "Nova Rare",
+     "finish": null,
+     "artist": "Envar Studio",
+     "language": "en",
+     "localized_name": null
+    },
+    {
+     "id": "248f408c-437b-48df-8410-b7419e2f54d2",
+     "collector_number": "021",
+     "image_url": "https://example.invalid/248f408c-437b-48df-8410-b7419e2f54d2.webp?sig=1",
+     "source_image_url": "https://dstcynss47vun.cloudfront.net/prod/cyberpunk/portal/248f408c-437b-48df-8410-b7419e2f54d2/render-msyh51ny.webp",
+     "set": {
+      "code": "edgerunneropens1",
+      "name": "Edgerunner Open S 1"
+     },
+     "rarity": "Nova Rare",
+     "finish": null,
+     "artist": "Envar Studio",
+     "language": "en",
+     "localized_name": null
+    },
+    {
+     "id": "ccbdc832-812d-4b93-abd2-c2a5ba1684d2",
+     "collector_number": "025",
+     "image_url": "https://example.invalid/ccbdc832-812d-4b93-abd2-c2a5ba1684d2.webp?sig=1",
+     "source_image_url": "https://dstcynss47vun.cloudfront.net/prod/cyberpunk/portal/ccbdc832-812d-4b93-abd2-c2a5ba1684d2/render-msyheqjy.webp",
+     "set": {
+      "code": "edgerunneropens1",
+      "name": "Edgerunner Open S 1"
+     },
+     "rarity": "Nova Rare",
+     "finish": null,
+     "artist": "Envar Studio",
+     "language": "en",
+     "localized_name": null
+    },
+    {
+     "id": "71f7fbe5-29ee-4432-911a-865db0346b16",
+     "collector_number": "033",
+     "image_url": "https://example.invalid/71f7fbe5-29ee-4432-911a-865db0346b16.webp?sig=1",
+     "source_image_url": "https://dstcynss47vun.cloudfront.net/prod/cyberpunk/portal/71f7fbe5-29ee-4432-911a-865db0346b16/render-mtcqjl63.webp",
+     "set": {
+      "code": "edgerunneropens1",
+      "name": "Edgerunner Open S 1"
+     },
+     "rarity": "Nova Rare",
+     "finish": null,
+     "artist": "Pandart Studio",
+     "language": "en",
+     "localized_name": null
+    },
+    {
+     "id": "1c3de235-c8a3-4d05-8f8a-7e9c12b799b2",
+     "collector_number": "005a",
+     "image_url": "https://example.invalid/1c3de235-c8a3-4d05-8f8a-7e9c12b799b2.webp?sig=1",
+     "source_image_url": "https://dstcynss47vun.cloudfront.net/prod/cyberpunk/portal/1c3de235-c8a3-4d05-8f8a-7e9c12b799b2/render-3f02ba0a-4a45-4fcc-a529-74e37f8c4bdd.webp",
+     "set": {
+      "code": "welcometonightcityretail-fr",
+      "name": "Welcome to Night City — Retail — FR"
+     },
+     "rarity": "Rare",
+     "finish": null,
+     "artist": "Olgierd Ciszak",
+     "language": "fr",
+     "localized_name": "V — Gosse Des Rues"
+    },
+    {
+     "id": "635e8f5e-6ece-44ad-af27-0f36fef34f22",
+     "collector_number": "005b",
+     "image_url": "https://example.invalid/635e8f5e-6ece-44ad-af27-0f36fef34f22.webp?sig=1",
+     "source_image_url": "https://dstcynss47vun.cloudfront.net/prod/cyberpunk/portal/635e8f5e-6ece-44ad-af27-0f36fef34f22/render-78fbffb6-48d5-4b45-9a40-0b449d682049.webp",
+     "set": {
+      "code": "welcometonightcityretail-fr",
+      "name": "Welcome to Night City — Retail — FR"
+     },
+     "rarity": "Rare",
+     "finish": null,
+     "artist": "Olgierd Ciszak",
+     "language": "fr",
+     "localized_name": "V — Gosse Des Rues"
+    },
+    {
+     "id": "eefebbcf-db78-4f26-b4cd-2c9501f5c446",
+     "collector_number": "144",
+     "image_url": "https://example.invalid/eefebbcf-db78-4f26-b4cd-2c9501f5c446.webp?sig=1",
+     "source_image_url": "https://dstcynss47vun.cloudfront.net/prod/cyberpunk/portal/eefebbcf-db78-4f26-b4cd-2c9501f5c446/render-75260599-4ec8-46d2-89ac-5dac9d58dfaf.webp",
+     "set": {
+      "code": "welcometonightcityretail-fr",
+      "name": "Welcome to Night City — Retail — FR"
+     },
+     "rarity": "Iconic Legend",
+     "finish": null,
+     "artist": "Pandart Studio",
+     "language": "fr",
+     "localized_name": "V — Gosse Des Rues"
+    }
+   ],
+   "selected_printing_id": "3fc63c58-5954-4744-a5af-047bfc5cb159",
+   "legalities": {
+    "standard": "legal"
+   },
+   "legality": "legal"
+  },
+  {
+   "id": "9e681d3e-cbfd-4c7b-a69a-72a83dc8b847",
+   "external_id": "cb-royce-psycho-on-the-edge",
+   "name": "Royce",
+   "subname": "Psycho on the Edge",
+   "display_name": "Royce: Psycho on the Edge",
+   "slug": "royce-psycho-on-the-edge",
+   "canonical_name": "Royce — Psycho on the Edge",
+   "canonical_base_name": "Royce",
+   "language": "en",
+   "flavor_text": null,
+   "printing_id": "3e2e228b-dbfb-484b-b82d-6972ff184aab",
+   "set": {
+    "code": "welcometonightcityretail",
+    "name": "Welcome to Night City — Retail"
+   },
+   "rarity": "Rare",
+   "image_url": "https://example.invalid/x.webp?sig=1",
+   "source_image_url": "https://dstcynss47vun.cloudfront.net/prod/cyberpunk/portal/3e2e228b-dbfb-484b-b82d-6972ff184aab/render-mpvml5uz.webp",
+   "color": "Red",
+   "card_type": "Legend",
+   "is_eddiable": true,
+   "classifications": [
+    "Maelstrom",
+    "Ganger"
+   ],
+   "keywords": [],
+   "cost": 6,
+   "power": 6,
+   "ram": 2,
+   "artist": "Michal Ivan",
+   "print_number": "004",
+   "printings": [
+    {
+     "id": "3e2e228b-dbfb-484b-b82d-6972ff184aab",
+     "collector_number": "004",
+     "image_url": "https://example.invalid/3e2e228b-dbfb-484b-b82d-6972ff184aab.webp?sig=1",
+     "source_image_url": "https://dstcynss47vun.cloudfront.net/prod/cyberpunk/portal/3e2e228b-dbfb-484b-b82d-6972ff184aab/render-mpvml5uz.webp",
+     "set": {
+      "code": "welcometonightcityretail",
+      "name": "Welcome to Night City — Retail"
+     },
+     "rarity": "Rare",
+     "finish": null,
+     "artist": "Michal Ivan",
+     "language": "en",
+     "localized_name": null
+    },
+    {
+     "id": "181a18f4-f6ba-4b23-bc56-ca43bd7d0843",
+     "collector_number": "143",
+     "image_url": "https://example.invalid/181a18f4-f6ba-4b23-bc56-ca43bd7d0843.webp?sig=1",
+     "source_image_url": "https://dstcynss47vun.cloudfront.net/prod/cyberpunk/portal/181a18f4-f6ba-4b23-bc56-ca43bd7d0843/render-mpvmpyul.webp",
+     "set": {
+      "code": "welcometonightcityretail",
+      "name": "Welcome to Night City — Retail"
+     },
+     "rarity": "Iconic Legend",
+     "finish": null,
+     "artist": "Pandart Studio",
+     "language": "en",
+     "localized_name": null
+    },
+    {
+     "id": "0e4966a2-e5cf-4acd-905a-750e9c4cefff",
+     "collector_number": "β004",
+     "image_url": "https://example.invalid/0e4966a2-e5cf-4acd-905a-750e9c4cefff.webp?sig=1",
+     "source_image_url": "https://dstcynss47vun.cloudfront.net/prod/cyberpunk/portal/0e4966a2-e5cf-4acd-905a-750e9c4cefff/render-mpu5w6cz.webp",
+     "set": {
+      "code": "welcometonightcitybeta",
+      "name": "Welcome to Night City — Beta"
+     },
+     "rarity": "Rare",
+     "finish": null,
+     "artist": "Michal Ivan",
+     "language": "en",
+     "localized_name": null
+    },
+    {
+     "id": "f712b214-b109-4e69-bc74-4991905024f7",
+     "collector_number": "β143",
+     "image_url": "https://example.invalid/f712b214-b109-4e69-bc74-4991905024f7.webp?sig=1",
+     "source_image_url": "https://dstcynss47vun.cloudfront.net/prod/cyberpunk/portal/f712b214-b109-4e69-bc74-4991905024f7/render-mpxm50aj.webp",
+     "set": {
+      "code": "welcometonightcitybeta",
+      "name": "Welcome to Night City — Beta"
+     },
+     "rarity": "Iconic Legend",
+     "finish": null,
+     "artist": "Pandart Studio",
+     "language": "en",
+     "localized_name": null
+    },
+    {
+     "id": "c89f2af6-dab2-40fe-a29e-6e98c0322f5d",
+     "collector_number": "003",
+     "image_url": "https://example.invalid/c89f2af6-dab2-40fe-a29e-6e98c0322f5d.webp?sig=1",
+     "source_image_url": "https://dstcynss47vun.cloudfront.net/prod/cyberpunk/portal/c89f2af6-dab2-40fe-a29e-6e98c0322f5d/render-mrjq91zw.webp",
+     "set": {
+      "code": "prereleaseretail",
+      "name": "Pre-Release Retail"
+     },
+     "rarity": "Rare",
+     "finish": null,
+     "artist": "Michal Ivan",
+     "language": "en",
+     "localized_name": null
+    },
+    {
+     "id": "cbbe5954-ce33-47aa-83c1-bdda4c7b907f",
+     "collector_number": "002",
+     "image_url": "https://example.invalid/cbbe5954-ce33-47aa-83c1-bdda4c7b907f.webp?sig=1",
+     "source_image_url": "https://dstcynss47vun.cloudfront.net/prod/cyberpunk/portal/cbbe5954-ce33-47aa-83c1-bdda4c7b907f/render-mqi3dbb3.webp",
+     "set": {
+      "code": "prereleasebeta",
+      "name": "Pre-Release Beta"
+     },
+     "rarity": "Rare",
+     "finish": null,
+     "artist": "Michal Ivan",
+     "language": "en",
+     "localized_name": null
+    },
+    {
+     "id": "e59f737b-83e1-45f2-a469-8bde0146b967",
+     "collector_number": "032",
+     "image_url": "https://example.invalid/e59f737b-83e1-45f2-a469-8bde0146b967.webp?sig=1",
+     "source_image_url": "https://dstcynss47vun.cloudfront.net/prod/cyberpunk/portal/e59f737b-83e1-45f2-a469-8bde0146b967/render-mtcqki1k.webp",
+     "set": {
+      "code": "edgerunneropens1",
+      "name": "Edgerunner Open S 1"
+     },
+     "rarity": "Nova Rare",
+     "finish": null,
+     "artist": "Pandart Studio",
+     "language": "en",
+     "localized_name": null
+    },
+    {
+     "id": "050e927a-f815-4aea-ac32-6d727d2b895a",
+     "collector_number": "004",
+     "image_url": "https://example.invalid/050e927a-f815-4aea-ac32-6d727d2b895a.webp?sig=1",
+     "source_image_url": "https://dstcynss47vun.cloudfront.net/prod/cyberpunk/portal/050e927a-f815-4aea-ac32-6d727d2b895a/render-a1e864eb-e06c-4734-94a4-73c083318a98.webp",
+     "set": {
+      "code": "welcometonightcityretail-fr",
+      "name": "Welcome to Night City — Retail — FR"
+     },
+     "rarity": "Rare",
+     "finish": null,
+     "artist": "Michal Ivan",
+     "language": "fr",
+     "localized_name": "Royce — Psychoverdose"
+    },
+    {
+     "id": "e3775ed6-d3c1-47f1-a3f4-835003900d8d",
+     "collector_number": "143",
+     "image_url": "https://example.invalid/e3775ed6-d3c1-47f1-a3f4-835003900d8d.webp?sig=1",
+     "source_image_url": "https://dstcynss47vun.cloudfront.net/prod/cyberpunk/portal/e3775ed6-d3c1-47f1-a3f4-835003900d8d/render-48a61114-ac1e-4335-aab9-74fc6727aab9.webp",
+     "set": {
+      "code": "welcometonightcityretail-fr",
+      "name": "Welcome to Night City — Retail — FR"
+     },
+     "rarity": "Iconic Legend",
+     "finish": null,
+     "artist": "Pandart Studio",
+     "language": "fr",
+     "localized_name": "Royce — Psychoverdose"
+    },
+    {
+     "id": "5f758458-2eb7-4286-8649-15195a3b92a3",
+     "collector_number": "003",
+     "image_url": "https://example.invalid/5f758458-2eb7-4286-8649-15195a3b92a3.webp?sig=1",
+     "source_image_url": "https://dstcynss47vun.cloudfront.net/prod/cyberpunk/portal/5f758458-2eb7-4286-8649-15195a3b92a3/render-c08437ad-d305-444e-9a01-025ff00aff8b.webp",
+     "set": {
+      "code": "prereleaseretail-FR",
+      "name": "Pre-Release Retail — French"
+     },
+     "rarity": "Rare",
+     "finish": null,
+     "artist": "Michal Ivan",
+     "language": "fr",
+     "localized_name": "Royce — Psychoverdose"
+    }
+   ],
+   "selected_printing_id": "3e2e228b-dbfb-484b-b82d-6972ff184aab",
+   "legalities": {
+    "standard": "legal"
+   },
+   "legality": "legal"
+  }
+ ],
+ "total": 3,
+ "limit": 100,
+ "offset": 0
+}

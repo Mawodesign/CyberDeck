@@ -1,0 +1,10 @@
+node_modules
+dist
+.superpowers
+.cache
+grading/inbox/*
+grading/results/*
+!grading/inbox/.gitkeep
+!grading/results/.gitkeep
+public/img
+public/data

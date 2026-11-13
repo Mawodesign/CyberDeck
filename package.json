@@ -1,0 +1,44 @@
+{
+  "name": "kolekcja-night-city",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview",
+    "test": "vitest run",
+    "data:cards": "tsx scripts/build-cards.ts",
+    "data:prices": "tsx scripts/fetch-prices.ts",
+    "data:fingerprints": "tsx scripts/build-fingerprints.ts",
+    "data": "npm run data:cards && npm run data:prices && npm run data:fingerprints",
+    "grading": "tsx server/grading-station.ts"
+  },
+  "dependencies": {
+    "@fontsource/chakra-petch": "^5.3.0",
+    "@fontsource/oxanium": "^5.3.0",
+    "@techstark/opencv-js": "^5.0.0-release.1",
+    "idb": "^8.0.4",
+    "jsqr": "^1.4.0",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1"
+  },
+  "devDependencies": {
+    "@testing-library/react": "^16.3.3",
+    "@types/node": "^26.6.6",
+    "@types/qrcode-terminal": "^0.12.2",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "@vitejs/plugin-basic-ssl": "^2.3.0",
+    "@vitejs/plugin-react": "^6.3.0",
+    "fake-indexeddb": "^6.2.8",
+    "jsdom": "^31.0.1",
+    "qrcode-terminal": "^0.12.0",
+    "sharp": "^0.35.5",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2",
+    "vite": "^8.3.8",
+    "vite-plugin-pwa": "^2.0.0",
+    "vitest": "^5.1.0"
+  }
+}
