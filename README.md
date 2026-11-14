@@ -38,7 +38,7 @@ Skieruj aparat na jedną lub kilka kart (do sześciu). Ramka cyjanowa oznacza ka
    npm run grading
    ```
 
-   Stacja wyświetli kod QR. Telefon łączy się z nią przez tunel HTTPS, który wymaga paczki `cloudflared` (`npm i -D cloudflared`). Z opcją `-- --local` stacja działa tylko dla przeglądarki na tym samym komputerze.
+   Stacja wyświetli kod QR. Telefon łączy się z nią przez darmowy tunel HTTPS Cloudflare (paczka `cloudflared`, instalowana razem z projektem). Z opcją `-- --local` stacja działa tylko dla przeglądarki na tym samym komputerze.
 2. W aplikacji: Grading → Połącz ze stacją → zeskanuj kod.
 3. Wybierz kartę, zrób sześć zdjęć, stuknij „Wyślij do oceny”. Zdjęcia trafiają do `grading/inbox/`.
 4. W Claude Code napisz „oceń karty”. Claude zapisze wynik w `grading/results/` (instrukcja w `grading/README.md`).

@@ -136,12 +136,25 @@ async function main() {
   if (process.argv.includes('--local')) return announce(`http://localhost:${STATION_PORT}`);
   try {
     // Paczka „cloudflared” jest opcjonalna; bez niej stacja działa tylko lokalnie.
-    const { tunnel } = await import('cloudflared' as string) as { tunnel: (o: Record<string, string>) => { url: Promise<string> } };
+    const { Tunnel } = await import('cloudflared');
     console.log('Otwieram tunel HTTPS…');
-    announce(await tunnel({ '--url': `http://localhost:${STATION_PORT}` }).url);
+    const t = Tunnel.quick(`http://localhost:${STATION_PORT}`);
+    const url = await new Promise<string>((resolve, reject) => {
+      t.once('url', resolve);
+      t.once('error', reject);
+      t.once('exit', (code) => reject(new Error(`cloudflared zakończył się kodem ${code}`)));
+      setTimeout(() => reject(new Error('tunel nie odpowiedział w 30 s')), 30000);
+    });
+    const close = () => {
+      t.stop();
+      process.exit(0);
+    };
+    process.on('SIGINT', close);
+    process.on('SIGTERM', close);
+    announce(url);
   } catch (e) {
     console.warn(`Tunel HTTPS niedostępny (${(e as Error).message.split('\n')[0]}).`);
-    console.warn('Telefon nie połączy się bez tunelu. Zainstaluj go: npm i -D cloudflared');
+    console.warn('Telefon nie połączy się bez tunelu. Sprawdź internet albo zainstaluj tunel ponownie: npm i -D cloudflared');
     announce(`http://localhost:${STATION_PORT}`);
   }
 }
